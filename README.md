@@ -4,20 +4,19 @@
 This project combines a GPS module, heart rate sensor (MAX30102), and Sigfox communication to create a portable safety monitoring device using the BBC micro:bit. The system monitors biometric and geolocation data in real time, sends alerts when users move outside a predefined safe zone, and logs information to ThingSpeak for remote access and analysis.
 
  Features
-
--GPS Tracking
+📍 GPS Tracking
 Parses NMEA $GPGGA data, converts to decimal coordinates, and validates location accuracy.
 
-- Heart Rate Monitoring
+❤️ Heart Rate Monitoring
 Reads optical pulse data using the MAX30102 sensor. Applies a moving average filter and detects BPM with peak interval analysis and exponential moving average (EMA).
 
-- Sigfox Communication
+📡 Sigfox Communication
 Encodes and sends compressed payloads (status, BPM, coordinates) over the 0G Sigfox network every 30 seconds.
 
-- Safe Zone Alerts
+🧭 Safe Zone Alerts
 Calculates user distance from a set safe zone using the Haversine formula. Scrolls ALERT or SAFE messages on the Micro:bit display accordingly.
 
-- ThingSpeak Integration
+📊 ThingSpeak Integration
 Easily integrate Sigfox backend callbacks to log GPS + BPM data on ThingSpeak dashboards.
 
 Hardware Requirements
@@ -45,5 +44,3 @@ Connecting to ThingSpeak
 1-Create a ThingSpeak channel.
 2-Use the Sigfox backend callbacks to forward messages to your ThingSpeak endpoint.
 3-Decode payloads using a custom parser script.
-
-
